@@ -1,0 +1,6 @@
+{
+  "name": "AFTERCLASS - HBTU Campus Network",
+  "description": "Exclusive campus social networking, dating, confessions, couples corner, communities, and event discovery for verified HBTU Kanpur students.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

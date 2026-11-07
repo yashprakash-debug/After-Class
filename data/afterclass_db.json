@@ -1,0 +1,321 @@
+{
+  "profiles": [
+    {
+      "id": "usr_1794057447171",
+      "full_name": "Priya Verma",
+      "display_name": "Priya",
+      "email": "priya.ece23@hbtu.ac.in",
+      "date_of_birth": "2004-05-14",
+      "branch": "Electronics Engineering",
+      "academic_year": "3rd Year (Junior)",
+      "bio": "Freshly joined AFTERCLASS HBTU.",
+      "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=Priya&backgroundColor=151a25&textColor=d9b978",
+      "gender": "Prefer not to say",
+      "is_age_verified": true,
+      "is_student_verified": true,
+      "account_status": "verified",
+      "is_discoverable": true,
+      "roll_number": "ENROLLED",
+      "verification_method": "institutional_email",
+      "interests": [
+        "Campus Cafes",
+        "Acoustic Music",
+        "Coding & AI"
+      ],
+      "personality_answers": {
+        "vibe": "Friendly & curious",
+        "beverage": "Cutting chai",
+        "scenery": "Campus lawns",
+        "schedule": "Balanced",
+        "weekend": "Exploring Kanpur"
+      },
+      "connection_preferences": [
+        "friendship",
+        "dating"
+      ],
+      "created_at": "2026-11-07T13:17:27.171Z",
+      "updated_at": "2026-11-07T13:17:27.171Z"
+    },
+    {
+      "id": "usr_1794058419363",
+      "full_name": "Yash Prakash",
+      "display_name": "Yash",
+      "email": "yashprakash26707@gmail.com",
+      "date_of_birth": "2003-08-20",
+      "branch": "Computer Science & Engineering",
+      "academic_year": "Final Year",
+      "bio": "Freshly joined AFTERCLASS HBTU.",
+      "avatar_url": "https://api.dicebear.com/7.x/initials/svg?seed=Yash&backgroundColor=151a25&textColor=d9b978",
+      "gender": "Prefer not to say",
+      "is_age_verified": true,
+      "is_student_verified": true,
+      "account_status": "verified",
+      "is_discoverable": true,
+      "roll_number": "ENROLLED",
+      "verification_method": "institutional_email",
+      "interests": [
+        "Campus Cafes",
+        "Acoustic Music",
+        "Coding & AI"
+      ],
+      "personality_answers": {
+        "vibe": "Friendly & curious",
+        "beverage": "Cutting chai",
+        "scenery": "Campus lawns",
+        "schedule": "Balanced",
+        "weekend": "Exploring Kanpur"
+      },
+      "connection_preferences": [
+        "friendship",
+        "dating"
+      ],
+      "created_at": "2026-11-07T13:33:39.363Z",
+      "updated_at": "2026-11-07T13:33:39.363Z"
+    }
+  ],
+  "verificationRequests": [
+    {
+      "id": "vr_1794058419363",
+      "profile_id": "usr_1794058419363",
+      "student_name": "Yash Prakash",
+      "email": "yashprakash26707@gmail.com",
+      "branch": "Computer Science & Engineering",
+      "academic_year": "Final Year",
+      "verification_method": "institutional_email",
+      "status": "approved",
+      "reviewer_notes": "Instant email verification",
+      "created_at": "2026-11-07T13:33:39.363Z"
+    },
+    {
+      "id": "vr_1794057447171",
+      "profile_id": "usr_1794057447171",
+      "student_name": "Priya Verma",
+      "email": "priya.ece23@hbtu.ac.in",
+      "branch": "Electronics Engineering",
+      "academic_year": "3rd Year (Junior)",
+      "verification_method": "institutional_email",
+      "status": "approved",
+      "reviewer_notes": "Instant domain verification (@hbtu.ac.in)",
+      "created_at": "2026-11-07T13:17:27.171Z"
+    }
+  ],
+  "likes": [],
+  "matches": [],
+  "messages": [],
+  "secretAdmirers": [],
+  "confessions": [
+    {
+      "id": "conf_1794057447179",
+      "author_id": "usr_1794057447171",
+      "content": "Can we appreciate how quiet the West Campus lawn is around sunset? Truly peaceful.",
+      "category": "Campus Life",
+      "is_anonymous": true,
+      "status": "approved",
+      "ai_moderation_flagged": false,
+      "likes_count": 0,
+      "comments_count": 0,
+      "created_at": "2026-11-07T13:17:27.179Z"
+    },
+    {
+      "id": "conf_1794057400457",
+      "author_id": "usr_verified_student",
+      "content": "East Campus library during monsoon hits differently. Best spot to prepare for end-sems.",
+      "category": "Campus Life",
+      "is_anonymous": true,
+      "status": "approved",
+      "ai_moderation_flagged": false,
+      "likes_count": 0,
+      "comments_count": 0,
+      "created_at": "2026-11-07T13:16:40.457Z"
+    }
+  ],
+  "communities": [
+    {
+      "id": "comm_01",
+      "name": "Book Lovers",
+      "slug": "book-lovers",
+      "description": "Literature, classics, sci-fi and quiet reading circles on HBTU lawns.",
+      "icon_name": "BookOpen",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_02",
+      "name": "Music Addicts",
+      "slug": "music-addicts",
+      "description": "Jam sessions, indie discoveries, acoustic nights and campus musicians.",
+      "icon_name": "Music",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_03",
+      "name": "Photography Collective",
+      "slug": "photography",
+      "description": "Capturing Kanpur light, Ganga Barrage, Allen Forest, and campus architecture.",
+      "icon_name": "Camera",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_04",
+      "name": "Chess Guild",
+      "slug": "chess",
+      "description": "Rapid games, tactics puzzles, and campus tournament preparation.",
+      "icon_name": "Trophy",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_05",
+      "name": "Fitness & Athletics",
+      "slug": "fitness",
+      "description": "Gym logs, track runs around East Campus sports ground, and athletics.",
+      "icon_name": "Dumbbell",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_06",
+      "name": "Movie Club",
+      "slug": "movies",
+      "description": "Weekend screenings, cinema debates, and film review discussions.",
+      "icon_name": "Film",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_07",
+      "name": "Campus Gamers",
+      "slug": "gaming",
+      "description": "Valorant, CS2, strategy, and esports matches.",
+      "icon_name": "Gamepad2",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_08",
+      "name": "Philosophy & Deep Talks",
+      "slug": "philosophy",
+      "description": "Existentialism, ethics, life dilemmas, and campus debates.",
+      "icon_name": "Brain",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_09",
+      "name": "Tech & Builders",
+      "slug": "technology",
+      "description": "Open source, AI projects, hackathons, and real-world engineering.",
+      "icon_name": "Cpu",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_10",
+      "name": "HBTU Entrepreneurs",
+      "slug": "entrepreneurship",
+      "description": "Startup ideas, pitch practice, and finding student co-founders.",
+      "icon_name": "Zap",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_11",
+      "name": "Kanpur Explorers",
+      "slug": "kanpur-explorers",
+      "description": "Street food walks, Swaroop Nagar cafes, Bithoor heritage, and city gems.",
+      "icon_name": "Compass",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    },
+    {
+      "id": "comm_12",
+      "name": "Introverts Club",
+      "slug": "introverts-club",
+      "description": "Low-energy social presence, quiet study buddies, zero social pressure.",
+      "icon_name": "Coffee",
+      "is_official": true,
+      "members_count": 0,
+      "posts_count": 0
+    }
+  ],
+  "communityPosts": [],
+  "coupleSpaces": [],
+  "coupleMemories": [],
+  "coupleNotes": [],
+  "coupleBucketLists": [],
+  "datePlans": [],
+  "events": [],
+  "polls": [
+    {
+      "id": "poll_campus_1",
+      "question": "What is the undisputed best winter evening beverage after classes at HBTU?",
+      "total_votes": 0,
+      "options": [
+        {
+          "id": "opt_chai",
+          "text": "Cutting chai at West Campus Canteen",
+          "votes": 0
+        },
+        {
+          "id": "opt_coffee",
+          "text": "Hot filter coffee near Swaroop Nagar",
+          "votes": 0
+        },
+        {
+          "id": "opt_badam",
+          "text": "Warm Badam Milk at East Campus gate",
+          "votes": 0
+        },
+        {
+          "id": "opt_green",
+          "text": "Green tea in hostel room",
+          "votes": 0
+        }
+      ]
+    }
+  ],
+  "notifications": [],
+  "reports": [
+    {
+      "id": "rep_1794057400473",
+      "reporter_id": "usr_anonymous_reporter",
+      "reporter_name": "HBTU Student",
+      "reason": "spam",
+      "details": "Test reporting mechanism",
+      "status": "open",
+      "created_at": "2026-11-07T13:16:40.473Z"
+    }
+  ],
+  "blocks": [],
+  "auditLogs": [],
+  "otpVerifications": [
+    {
+      "email": "rahul.cse22@hbtu.ac.in",
+      "code": "651846",
+      "expiresAt": 1794058000442
+    },
+    {
+      "email": "priya.ece23@hbtu.ac.in",
+      "code": "918961",
+      "expiresAt": 1794058047140
+    },
+    {
+      "email": "yashprakash26707@gmail.com",
+      "code": "893263",
+      "expiresAt": 1794059019333
+    }
+  ]
+}

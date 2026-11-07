@@ -1,0 +1,1337 @@
+# PROJECT: AFTERCLASS
+## Beyond classrooms. Beyond connections.
+
+Act as a world-class product designer, senior full-stack software engineer, UI/UX architect, database engineer, security engineer and startup product strategist.
+
+Your task is to design and build a complete, production-minded, mobile-first social networking and dating web application called **AFTERCLASS**, exclusively for verified HBTU (Harcourt Butler Technical University), Kanpur students.
+
+This must be a real, working full-stack application, not a static prototype.
+
+Do not create only a landing page. Build the actual application, its database integration, authentication, user dashboards, interactive features, admin dashboard and responsive interfaces.
+
+---
+
+# 1. PRODUCT VISION
+
+AFTERCLASS is an independent, student-created campus social platform.
+
+Tagline: **Beyond classrooms. Beyond connections.**
+
+The platform brings together four categories of users:
+
+1. Singles looking for romantic connections.
+2. Students looking for friendships and social connections.
+3. Couples who want a private digital space.
+4. Students who want to participate in communities, activities and campus events.
+
+The platform should feel like a combination of:
+- A premium dating application.
+- A private university social network.
+- An anonymous confession community.
+- A couples' relationship application.
+- A campus event discovery platform.
+
+It must not feel like a generic social media clone.
+
+### Product principles
+
+- Privacy first.
+- Consent-based interactions.
+- Verified campus community.
+- Respectful social discovery.
+- Inclusive experience for singles, couples and friends.
+- No harassment, stalking, doxxing or unwanted exposure.
+- Simple, elegant and addictive through useful features, not manipulative notifications.
+
+Dating functionality must be restricted to verified users aged 18 or above. Friendship and community functionality must also follow applicable age and safety requirements.
+
+Do not represent AFTERCLASS as an official HBTU service or use university logos without authorization.
+
+---
+
+# 2. TECHNOLOGY STACK
+
+Use the following technologies:
+
+### Frontend
+- Next.js with App Router.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui components where appropriate.
+- Lucide icons.
+- Framer Motion for subtle animations.
+- React Hook Form.
+- Zod validation.
+
+### Backend
+- Supabase.
+- PostgreSQL database.
+- Supabase Authentication.
+- Supabase Storage.
+- Supabase Realtime for messaging and notifications.
+- Supabase Row Level Security.
+
+### Deployment
+- Vercel.
+- Environment variables.
+- Production-ready database migrations.
+- Supabase production configuration.
+
+### Optional integrations
+- Gemini API for AI-generated conversation starters, date ideas and personality descriptions.
+- Email provider for verification and transactional notifications.
+- Analytics with privacy-respecting event tracking.
+
+Do not make AI functionality a requirement for the core application to work.
+
+Do not use localStorage as the primary database.
+
+Do not use hardcoded demo users as real users.
+
+---
+
+# 3. BRAND IDENTITY AND DESIGN SYSTEM
+
+Create a premium, sophisticated, modern Gen-Z interface.
+
+The brand should feel slightly mysterious, romantic, youthful and elegant.
+
+Avoid childish graphics, excessive gradients, excessive pink colours and generic dating-app templates.
+
+### Colour palette
+
+- Midnight Navy: #101827
+- Deep Charcoal: #151A25
+- Card Background: #1D2636
+- Soft Rose: #E879A9
+- Champagne Gold: #D9B978
+- Cloud White: #F3F4F6
+- Muted Gray: #9CA3AF
+- Success Green: #4ADE80
+- Error Red: #F87171
+
+Use dark mode as the primary theme, with an optional light mode.
+
+### Typography
+- Headings: Manrope.
+- Body: Inter.
+- Buttons: Inter Medium.
+
+### Design requirements
+
+- Rounded cards.
+- Subtle shadows.
+- Premium profile cards.
+- Smooth transitions.
+- Beautiful empty states.
+- Skeleton loaders.
+- Consistent spacing.
+- Clear visual hierarchy.
+- Mobile-first layouts.
+- Accessible contrast.
+- Responsive navigation.
+- Meaningful hover and focus states.
+
+### Logo
+
+Create a minimal wordmark:
+
+AFTERCLASS
+
+Use a sophisticated AC monogram incorporating a subtle connection or heart-inspired element.
+
+Do not use a generic heart as the entire logo.
+
+### Tagline
+
+"Beyond classrooms. Beyond connections."
+
+Secondary tagline:
+
+"Your campus. Your people. Your stories."
+
+---
+
+# 4. WEBSITE ARCHITECTURE
+
+Create the following public and authenticated routes.
+
+### Public routes
+
+- /
+- /about
+- /how-it-works
+- /safety
+- /privacy
+- /terms
+- /community-guidelines
+- /contact
+- /login
+- /signup
+- /forgot-password
+
+### Authenticated routes
+
+- /home
+- /discover
+- /matches
+- /messages
+- /confessions
+- /secret-admirer
+- /couples
+- /date-planner
+- /communities
+- /events
+- /notifications
+- /profile
+- /settings
+
+### Admin routes
+
+- /admin
+- /admin/users
+- /admin/verifications
+- /admin/reports
+- /admin/confessions
+- /admin/communities
+- /admin/events
+- /admin/analytics
+- /admin/settings
+
+All protected routes must enforce authentication and authorization on the server, not merely hide UI elements.
+
+---
+
+# 5. LANDING PAGE
+
+Build a visually impressive landing page.
+
+### Hero section
+
+Brand: AFTERCLASS
+
+Headline:
+
+"Your college life deserves more connections."
+
+Subheading:
+
+"Meet new people, discover meaningful connections, share stories and create memories beyond the classroom."
+
+Primary CTA:
+"Join AFTERCLASS"
+
+Secondary CTA:
+"Explore the experience"
+
+Add a beautiful animated visual showing profile cards, community activities, chat previews and social interactions.
+
+### Other landing page sections
+
+1. How AFTERCLASS works.
+2. Discover your people.
+3. Meet through shared interests.
+4. Anonymous confessions.
+5. Your private couples' space.
+6. Plan memorable dates.
+7. Join campus communities.
+8. Privacy and safety.
+9. Frequently asked questions.
+10. Footer with legal pages and contact information.
+
+Do not show fabricated user counts, fake testimonials or fake popularity statistics.
+
+---
+
+# 6. AUTHENTICATION AND STUDENT VERIFICATION
+
+Create a complete registration and authentication system.
+
+### Registration fields
+
+- Full name.
+- Display name.
+- Email.
+- Password.
+- Date of birth.
+- Branch.
+- Academic year.
+- College verification method.
+- Acceptance of terms and privacy policy.
+
+Use approved institutional email verification where available.
+
+If institutional email is unavailable, provide manual verification through an authorized administrator using an appropriate enrolment document.
+
+Do not assume that possessing an email address alone proves current enrolment.
+
+### Account states
+
+- Pending verification.
+- Verified.
+- Rejected.
+- Suspended.
+- Deactivated.
+
+### Age restrictions
+
+- Verify age before enabling dating functionality.
+- Dating features require age 18 or above.
+- Do not expose date of birth publicly.
+- Do not allow users to bypass age restrictions through profile settings.
+
+### Authentication features
+
+- Sign up.
+- Login.
+- Logout.
+- Password reset.
+- Email verification.
+- Session management.
+- Protected routes.
+- Account deletion.
+- Verification status display.
+
+Never expose Supabase service-role keys or administrative credentials to the browser.
+
+---
+
+# 7. USER ONBOARDING
+
+After registration, guide students through a beautiful multi-step onboarding process.
+
+### Step 1: Basic profile
+
+- Display name.
+- Profile photograph (optional).
+- Branch.
+- Academic year.
+- Short bio.
+
+### Step 2: Interests
+
+Allow multiple selections:
+
+- Music.
+- Movies.
+- Books.
+- Photography.
+- Gaming.
+- Fitness.
+- Chess.
+- Travel.
+- Food.
+- Art.
+- Technology.
+- Philosophy.
+- Sports.
+- Entrepreneurship.
+- Other interests.
+
+### Step 3: Personality
+
+Ask fun questions:
+
+- Introvert or extrovert?
+- Coffee or tea?
+- Mountains or beaches?
+- Night owl or early bird?
+- Movies or books?
+- Planned adventures or spontaneous plans?
+
+### Step 4: Connection preferences
+
+Allow users to choose:
+
+- Dating.
+- Friendship.
+- Study partner.
+- Activity partner.
+- Social connections.
+
+Users should control which preferences are visible.
+
+### Step 5: Profile visibility
+
+Allow:
+
+- Discoverable.
+- Hidden from discovery.
+- Temporarily paused.
+
+### Step 6: Confirmation
+
+Show a beautiful profile preview before publishing.
+
+Allow users to edit all onboarding information later.
+
+---
+
+# 8. HOME DASHBOARD
+
+Create a personalized dashboard after login.
+
+### Dashboard components
+
+1. Welcome message.
+2. Profile completion indicator.
+3. Daily question.
+4. Suggested connections.
+5. Recent mutual matches.
+6. New community discussions.
+7. Trending approved confessions.
+8. Upcoming events.
+9. Date idea of the day.
+10. Notifications.
+
+The dashboard must be personalized using actual database information.
+
+Do not display private data from other users.
+
+Create attractive empty states when a user has no matches, messages or communities.
+
+---
+
+# 9. DISCOVER — SOCIAL AND DATING DISCOVERY
+
+This is one of the core features.
+
+Create a sophisticated profile discovery experience.
+
+### Profile cards
+
+Each card can display:
+
+- Profile photo.
+- Display name.
+- Branch.
+- Academic year.
+- Bio.
+- Interests.
+- Connection preferences.
+- Selected personality answers.
+
+Only display information the user has explicitly made visible.
+
+### Discovery actions
+
+- Like.
+- Pass.
+- Send connection request.
+- View profile.
+- Block.
+- Report.
+
+### Filters
+
+- Branch.
+- Academic year.
+- Shared interests.
+- Connection preference.
+- Selected profile preferences.
+
+Only provide filters that users have consented to expose.
+
+Do not expose sensitive personal characteristics.
+
+### Matching algorithm
+
+Build a transparent recommendation system based on:
+
+- Shared interests.
+- Similar hobbies.
+- Personality question compatibility.
+- Mutual connection preferences.
+- Explicitly selected discovery preferences.
+
+Start with a straightforward weighted matching algorithm.
+
+Example scoring:
+
+- Shared interests: 40%.
+- Personality answers: 25%.
+- Common activities: 20%.
+- Mutual preferences: 15%.
+
+These are recommendation weights, not scientific compatibility measurements.
+
+Do not rank people by attractiveness.
+
+### Mutual matching
+
+A match is created only when both users independently express interest.
+
+When a mutual match occurs:
+
+- Create a match record.
+- Notify both users.
+- Enable messaging.
+- Display a match animation.
+- Provide optional conversation starters.
+
+Prevent duplicate likes and duplicate match records.
+
+Users must be able to unmatch and block at any time.
+
+---
+
+# 10. MATCHES AND PRIVATE MESSAGING
+
+Create a real-time messaging system.
+
+### Match page
+
+Show:
+
+- Active matches.
+- Profile thumbnail.
+- Display name.
+- Last message preview.
+- Unread message count.
+- Match date.
+
+### Chat interface
+
+Include:
+
+- Real-time text messages.
+- Message timestamps.
+- Unread indicators.
+- Typing indicators (optional).
+- Conversation starter suggestions.
+- Unmatch.
+- Block.
+- Report.
+- Delete conversation from the user's view.
+
+Do not implement image, video or file messaging in the first release.
+
+### Privacy
+
+- Only matched participants can access their conversation.
+- No public chat URLs.
+- No administrator browsing of private messages.
+- Restrict report access to relevant evidence voluntarily submitted through the reporting process.
+- Enforce permissions through RLS.
+- Prevent unauthorized conversation subscriptions.
+
+Implement pagination and sensible message limits.
+
+---
+
+# 11. SECRET ADMIRER
+
+Create a fun, consent-based mutual crush feature.
+
+### How it works
+
+1. A verified adult user privately expresses interest in another eligible user.
+2. The recipient receives a generic notification that they have a secret admirer.
+3. The recipient can independently select people they are interested in.
+4. If both independently select each other, a mutual connection is created.
+5. Both are notified.
+6. Both can choose whether to reveal their identities and begin chatting.
+
+### Features
+
+- Private expression of interest.
+- Mutual crush detection.
+- Anonymous appreciation.
+- Optional identity reveal with consent.
+- Rate limiting.
+- Duplicate prevention.
+- Blocking and abuse reporting.
+
+Never reveal a sender's identity without explicit permission.
+
+Do not permit unrestricted anonymous messages or public lists of admirers.
+
+---
+
+# 12. CONFESSIONS
+
+Create an anonymous campus storytelling community.
+
+### Categories
+
+- Crushes.
+- Love.
+- Friendship.
+- College life.
+- Funny incidents.
+- Appreciation.
+- Relationships.
+- Personal experiences.
+- General thoughts.
+
+### Posting interface
+
+Fields:
+
+- Confession text.
+- Category.
+- Optional content warning.
+- Anonymous display setting.
+
+### Feed features
+
+- Approved posts.
+- Reactions.
+- Comments.
+- Report.
+- Sorting by latest and popular.
+- Category filters.
+- Search.
+
+### Moderation
+
+Every submission must enter a pending moderation queue before publication.
+
+Support:
+
+- Approve.
+- Reject.
+- Remove.
+- Hide.
+- Flag for review.
+
+Automatically flag possible phone numbers, personal addresses, targeted harassment, threats and identifying disclosures.
+
+Do not publish accusations, private photographs, sexual content or identifying personal information about other students.
+
+Anonymous to other users does not mean anonymous to the platform's authorized safety systems.
+
+Do not let administrators casually inspect the identity behind anonymous posts. Restrict any necessary access to a documented, logged safety process.
+
+---
+
+# 13. COUPLES CORNER
+
+Build a private shared digital space for consenting couples.
+
+### Creating a couple space
+
+- One verified adult user sends an invitation.
+- The other user accepts.
+- Both become members of a private shared space.
+- Either user can leave the space.
+- Do not automatically connect relationship profiles.
+
+### Features
+
+**Our Story**
+- Relationship start date (optional).
+- Timeline.
+- Important memories.
+
+**Shared Memories**
+- Private photo uploads.
+- Captions.
+- Date information.
+- Delete controls.
+
+**Love Notes**
+- Private letters.
+- Saved messages.
+- Optional reminders.
+
+**Countdown**
+- Anniversary.
+- Birthday.
+- Special occasions.
+
+**Bucket List**
+- Add experiences.
+- Mark completed activities.
+- Share plans.
+
+**Couple Quiz**
+- Fun questions.
+- Compare answers.
+- Conversation starters.
+
+**Daily Question**
+- One relationship conversation prompt per day.
+
+### Privacy
+
+Only the two consenting members can access their couple space.
+
+Enforce access through RLS.
+
+Do not display relationship status publicly without explicit consent.
+
+Leaving a couple space must revoke future access. Clearly explain what happens to shared data before either member deletes it.
+
+---
+
+# 14. DATE PLANNER
+
+Create an interactive date planning tool.
+
+### User selections
+
+- Budget: ₹100, ₹300, ₹500, ₹1,000 or custom.
+- Mood: Romantic, adventurous, peaceful, fun.
+- Duration: 1 hour, 2 hours, half-day.
+- Experience: Food, movies, activities, exploration.
+
+### Output
+
+Generate a date itinerary with:
+
+- Suggested activity.
+- Estimated budget.
+- Suggested duration.
+- Preparation checklist.
+- Optional conversation prompts.
+- Notes.
+
+Include a date idea generator.
+
+Allow users to save plans and share them privately.
+
+Do not fabricate business names, prices, opening hours or availability.
+
+Local venue recommendations must be based on verified, current information when real businesses are suggested.
+
+Never track users' real-time locations.
+
+---
+
+# 15. COMMUNITIES
+
+Create interest-based social groups.
+
+### Default communities
+
+- Book Lovers.
+- Music Addicts.
+- Photography.
+- Chess.
+- Fitness.
+- Movies.
+- Gaming.
+- Philosophy.
+- Technology.
+- Entrepreneurship.
+- Kanpur Explorers.
+- Introverts Club.
+
+### Community features
+
+- Community description.
+- Community icon.
+- Join and leave.
+- Discussion feed.
+- Posts.
+- Comments.
+- Reactions.
+- Community announcements.
+- Moderator roles.
+- Report functionality.
+
+Allow administrators to create, edit and archive communities.
+
+Prevent spam and abusive content.
+
+---
+
+# 16. CAMPUS BUZZ — EVENTS
+
+Build a student activity and event discovery section.
+
+### Features
+
+- Upcoming events.
+- Event categories.
+- Event description.
+- Date and time.
+- Venue or public meeting point.
+- Registration.
+- Participant count.
+- Event organizer.
+- Cancellation status.
+- Event announcements.
+
+### Event categories
+
+- Social mixers.
+- Movie nights.
+- Coffee meetups.
+- Photography walks.
+- Chess meetups.
+- Singles events.
+- Valentine's events.
+- Community activities.
+
+Allow approved event organizers to submit event proposals.
+
+All public events must be reviewed by an administrator before publishing.
+
+Do not expose participant lists publicly by default.
+
+---
+
+# 17. DAILY ENGAGEMENT FEATURES
+
+Implement:
+
+### Question of the Day
+
+One daily question.
+
+Users can submit answers and optionally share them with eligible community members.
+
+### Campus Polls
+
+- Create polls.
+- Vote.
+- View results.
+- Set expiry.
+- Report inappropriate polls.
+
+### Personality Cards
+
+Create shareable personality summaries using user-selected answers.
+
+Do not present them as clinical or scientifically validated assessments.
+
+### Social Challenges
+
+Weekly optional challenges such as:
+
+- Meet someone new.
+- Read a new book.
+- Find a chess partner.
+- Attend a campus event.
+- Explore a new hobby.
+
+### Memory Wall
+
+Allow students to share approved campus memories voluntarily.
+
+Do not automatically collect photographs or tag students.
+
+---
+
+# 18. AI FEATURES
+
+Integrate Gemini API only through secure server-side endpoints.
+
+### AI Dating Assistant
+
+- First-message suggestions.
+- Conversation starters.
+- Profile bio suggestions.
+- Respectful communication suggestions.
+
+### AI Date Planner
+
+Generate date ideas based on the user's budget and preferences.
+
+### AI Personality Summary
+
+Convert voluntarily submitted quiz responses into a fun personality description.
+
+### AI Confession Moderation Assistance
+
+Flag potentially harmful submissions for human review.
+
+AI must never be the sole decision-maker for serious account suspensions or sensitive moderation decisions.
+
+Do not send private messages, private couple memories or confidential personal information to external AI providers.
+
+Include request limits, input validation and error handling.
+
+---
+
+# 19. NOTIFICATIONS
+
+Create an in-app notification system.
+
+Notification types:
+
+- New mutual match.
+- New message.
+- Connection request.
+- Secret admirer mutual match.
+- Confession approval/rejection.
+- Community reply.
+- Event reminder.
+- Couple invitation.
+- Couple-space activity.
+
+Allow users to configure notification preferences.
+
+Avoid revealing sensitive information in notification previews.
+
+---
+
+# 20. USER PROFILE AND SETTINGS
+
+### Profile page
+
+- Profile photo.
+- Display name.
+- Branch.
+- Academic year.
+- Bio.
+- Interests.
+- Personality cards.
+- Connection preferences.
+- Profile completion.
+
+### Settings
+
+- Edit profile.
+- Change password.
+- Notification settings.
+- Privacy settings.
+- Profile visibility.
+- Blocked users.
+- Data export request.
+- Account deletion.
+- Logout.
+
+Allow users to control whether their profile appears in discovery.
+
+Provide clear account deactivation and deletion workflows.
+
+---
+
+# 21. ADMIN DASHBOARD
+
+Build a separate, secure administration interface.
+
+Only explicitly authorized administrator accounts may access it.
+
+Create role-based access:
+
+- Super Admin.
+- Moderator.
+- Event Manager.
+- Content Manager.
+
+### Dashboard overview
+
+Display:
+
+- Total verified users.
+- Pending verification requests.
+- New registrations.
+- Active users.
+- Pending confessions.
+- Open reports.
+- Published events.
+- Community statistics.
+
+All statistics must be calculated from real database data.
+
+### User management
+
+- View accounts.
+- Verify enrolment.
+- Reject verification.
+- Suspend accounts.
+- Reactivate accounts.
+- Review reported profiles.
+- Manage account deletion requests.
+
+### Content moderation
+
+- Review confessions.
+- Review reports.
+- Review polls.
+- Review community posts.
+- Review event proposals.
+- Record moderation decisions.
+
+### Event management
+
+- Create events.
+- Edit events.
+- Publish events.
+- Cancel events.
+- Manage registrations.
+
+### Analytics
+
+Provide:
+- User registration trends.
+- Daily and weekly active users.
+- Feature engagement.
+- Event participation.
+- Confession moderation statistics.
+- Report resolution time.
+
+Do not collect unnecessary sensitive analytics.
+
+### Audit log
+
+Record:
+- Administrator identity.
+- Action performed.
+- Timestamp.
+- Affected record.
+- Reason for sensitive moderation actions.
+
+Do not log passwords, authentication tokens or private message content.
+
+---
+
+# 22. DATABASE DESIGN
+
+Create PostgreSQL migrations for the following tables.
+
+1. profiles
+2. verification_requests
+3. user_preferences
+4. interests
+5. user_interests
+6. personality_answers
+7. likes
+8. matches
+9. conversations
+10. conversation_members
+11. messages
+12. secret_admirer_requests
+13. confessions
+14. confession_reactions
+15. confession_comments
+16. communities
+17. community_members
+18. community_posts
+19. community_comments
+20. couple_spaces
+21. couple_members
+22. couple_invitations
+23. couple_memories
+24. couple_notes
+25. couple_bucket_lists
+26. date_plans
+27. events
+28. event_registrations
+29. polls
+30. poll_options
+31. poll_votes
+32. notifications
+33. reports
+34. blocks
+35. admin_users
+36. moderation_actions
+37. audit_logs
+
+### Database requirements
+
+- Use UUID primary keys.
+- Add foreign keys.
+- Add created_at and updated_at timestamps.
+- Add appropriate indexes.
+- Add unique constraints.
+- Prevent duplicate likes and matches.
+- Use transactions for mutual matching.
+- Validate all inputs.
+- Use database constraints for critical rules.
+
+Create migrations and seed scripts.
+
+Seed only generic categories, interests, questions and initial configuration. Do not seed fake students, fake conversations or fake engagement statistics.
+
+---
+
+# 23. ROW LEVEL SECURITY AND SECURITY
+
+This is a critical part of the application.
+
+Enable RLS on every table containing user data.
+
+Define policies for:
+
+- Profiles.
+- Likes.
+- Matches.
+- Messages.
+- Conversations.
+- Secret admirer requests.
+- Confessions.
+- Comments.
+- Couple spaces.
+- Couple memories.
+- Communities.
+- Event registrations.
+- Reports.
+- Notifications.
+- Administrative records.
+
+Rules:
+
+1. Users can edit only their own profiles.
+2. Users can read only permitted profile fields.
+3. Only verified eligible users can participate in dating.
+4. Only matched users can access their conversations.
+5. Only conversation members can access messages.
+6. Only couple-space members can access their private couple content.
+7. Only authorized moderators can access moderation queues.
+8. Only administrators with suitable roles can perform administrative actions.
+9. Users cannot approve their own verification.
+10. Users cannot modify their own administrator roles.
+11. Blocked users cannot contact the blocker.
+12. Unmatched users cannot continue sending messages.
+13. Notifications are visible only to their recipients.
+
+Use server-side validation in addition to RLS.
+
+Create automated tests for authorization boundaries.
+
+Never trust client-supplied user IDs for privileged operations.
+
+---
+
+# 24. STORAGE ARCHITECTURE
+
+Create separate Supabase Storage buckets with appropriate permissions:
+
+- profile-images
+- confession-media (only if necessary and moderated)
+- couple-memories
+- event-images
+
+Storage requirements:
+
+- Validate file types.
+- Restrict file sizes.
+- Use random object names.
+- Prevent executable uploads.
+- Use private buckets for private content.
+- Generate short-lived signed URLs where appropriate.
+- Apply storage access policies.
+- Prevent unauthorized deletion and access.
+
+Do not store private couple images in public buckets.
+
+---
+
+# 25. PERFORMANCE AND RESPONSIVENESS
+
+The application must work smoothly on:
+
+- Android smartphones.
+- iPhones.
+- Desktop computers.
+- Tablets.
+
+Requirements:
+
+- Mobile-first design.
+- Responsive navigation.
+- Lazy-loaded images.
+- Optimized images.
+- Pagination.
+- Database query optimization.
+- Loading skeletons.
+- Error states.
+- Empty states.
+- Offline-friendly handling where appropriate.
+
+Avoid unnecessary heavy animations.
+
+Use accessible semantic HTML and keyboard navigation.
+
+---
+
+# 26. LEGAL AND SAFETY PAGES
+
+Create the following complete pages:
+
+- Privacy Policy.
+- Terms of Service.
+- Community Guidelines.
+- Safety Guidelines.
+- Contact and Reporting.
+
+Include explanations of:
+
+- User data collection.
+- Data retention.
+- Third-party integrations.
+- Consent and messaging.
+- User-generated content.
+- Reporting and moderation.
+- Account deletion.
+- Data access and correction.
+- Age eligibility.
+- Platform limitations.
+
+Do not invent legal compliance certifications.
+
+Prepare these policies for legal review before public launch.
+
+---
+
+# 27. TESTING REQUIREMENTS
+
+Test the complete application.
+
+### Authentication
+- Registration.
+- Login.
+- Logout.
+- Password reset.
+- Verification.
+- Session expiry.
+
+### Discovery
+- Profile visibility.
+- Preference matching.
+- Like and pass.
+- Mutual matching.
+- Duplicate prevention.
+
+### Messaging
+- Authorized access.
+- Unauthorized access rejection.
+- Realtime delivery.
+- Blocking.
+- Unmatching.
+
+### Confessions
+- Submission.
+- Moderation.
+- Publication.
+- Rejection.
+- Reporting.
+
+### Couples
+- Invitation.
+- Acceptance.
+- Private access.
+- Leaving a shared space.
+
+### Admin
+- Role permissions.
+- Verification workflow.
+- Report resolution.
+- Audit logs.
+
+### Security
+- RLS testing.
+- Cross-user data access attempts.
+- Storage access.
+- API validation.
+- Rate limiting.
+- Abuse prevention.
+
+Do not declare the application production-ready until these tests pass.
+
+---
+
+# 28. DEVELOPMENT INSTRUCTIONS
+
+Follow this development sequence.
+
+**Stage 1:** Set up the project and design system.
+
+**Stage 2:** Build landing page, authentication and verification.
+
+**Stage 3:** Implement onboarding, profiles and preferences.
+
+**Stage 4:** Build discovery, matching and messaging.
+
+**Stage 5:** Implement confessions and Secret Admirer.
+
+**Stage 6:** Build Couples Corner and Date Planner.
+
+**Stage 7:** Build Communities, Campus Buzz and engagement features.
+
+**Stage 8:** Build the admin dashboard.
+
+**Stage 9:** Implement RLS, security testing and automated tests.
+
+**Stage 10:** Deploy and verify the complete application.
+
+### Critical development rules
+
+- Do not generate a static mockup and call it complete.
+- Do not create buttons that do nothing.
+- Do not use fake success notifications for unimplemented operations.
+- Do not substitute mock data for actual database functionality.
+- Do not put secret keys in frontend files.
+- Do not skip database migrations.
+- Do not skip RLS.
+- Do not create fake user profiles.
+- Do not use placeholder pages for essential features.
+- Do not silently ignore errors.
+- Do not overwrite working code unnecessarily.
+- Maintain a clean and reusable component architecture.
+
+If an integration requires credentials, implement the integration properly, create an environment variable placeholder and explain the setup required.
+
+If a feature is too large to complete in one pass, implement it in clearly defined stages and maintain a working application at every stage.
+
+---
+
+# 29. REQUIRED DELIVERABLES
+
+At completion, provide:
+
+1. Complete source code.
+2. Working responsive frontend.
+3. Supabase database schema.
+4. SQL migration files.
+5. RLS policies.
+6. Authentication implementation.
+7. Storage configuration.
+8. Admin dashboard.
+9. Environment variable example file.
+10. README with installation instructions.
+11. Deployment instructions.
+12. Testing instructions.
+13. List of external API credentials required.
+14. Known limitations and incomplete integrations.
+
+### Environment variables
+
+Create a `.env.example` file with placeholders such as:
+
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+GEMINI_API_KEY=
+
+Never commit real secrets.
+
+---
+
+# 30. FINAL PRODUCT QUALITY
+
+The final result should feel like a premium startup product designed by an experienced product team.
+
+The website should be:
+
+- Visually polished.
+- Fast.
+- Mobile-first.
+- Fully responsive.
+- Database-connected.
+- Secure.
+- Accessible.
+- Easy to navigate.
+- Privacy-conscious.
+- Easy for one student administrator to manage.
+
+The most important thing:
+
+**Build AFTERCLASS as a real campus social ecosystem, not merely a dating-themed landing page.**
+
+Start by creating the project architecture and complete design system. Then implement the working application feature by feature, verifying each stage before proceeding.
+
+At the end of each development stage, summarize:
+- What has been implemented.
+- Which database tables were created.
+- Which integrations are working.
+- Which environment variables are required.
+- What remains incomplete.
+- How to test the implemented functionality.
+
+Begin development now.
